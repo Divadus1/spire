@@ -9,7 +9,7 @@ public class DrawnCardsFreeToPlayOnceAction extends AbstractGameAction {
     @Override
     public void update() {
         for ( AbstractCard card : DrawCardAction.drawnCards )
-            card.freeToPlayOnce = true;
+             card.setCostForTurn(card.costForTurn - 1);
         this.isDone = true;
     }
 
